@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto – Vil Sonidos</title>
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">Vil Sonidos</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-btn">Inicio</a></li>
+            <li><a href="servicios.html" class="nav-btn">Servicios</a></li>
+            <li><a href="contacto.html" class="nav-btn active">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="contact-container">
+    <h1>Contacto</h1>
+    <p class="descripcion">
+        Completá el formulario y nos comunicamos con vos para coordinar sonido, iluminación o DJ para tu evento.
+    </p>
+
+    <form class="contact-form">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" placeholder="ejemplo@gmail.com" required>
+
+        <label for="telefono">Número de teléfono</label>
+        <input type="tel" id="telefono" placeholder="+54 299..." required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" placeholder="¿Qué servicio necesitás?" rows="5" required></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar mensaje</button>
+    </form>
+</main>
+
+<footer>
+    <p>© 2025 Vil Sonidos – Sonido & Iluminación Profesional</p>
+</footer>
+
+</body>
+</html>

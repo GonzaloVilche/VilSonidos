@@ -1,0 +1,93 @@
+/* Fondo general */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0e0e0e;
+    color: white;
+}
+
+/* CONTENEDOR */
+.contact-container {
+    max-width: 700px;
+    margin: 50px auto;
+    background: #151515;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(39, 255, 138, 0.25);
+    animation: fadeInUp 0.9s ease;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: #27ff8a;
+}
+
+.descripcion {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #d6d6d6;
+}
+
+/* FORMULARIO */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    color: #98ffcb;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    background: #0d0d0d;
+    border: 1px solid #27ff8a;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 12px #27ff8a;
+    border-color: #59ffc1;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+    background: #27ff8a;
+    color: black;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(39, 255, 138, 0.5);
+}
+
+.btn-enviar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(39, 255, 138, 1);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #808080;
+    font-size: 14px;
+}
