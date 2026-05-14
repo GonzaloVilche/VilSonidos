@@ -1,0 +1,16 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Variables de entorno (por si usas un servidor luego)
+.env
+.env.local
+
+# Archivos de respaldo de base de datos (por si usas SQLite luego)
+*.db
+*.sqlite
+
+# Carpeta de dependencias (si llegas a usar npm)
+node_modules/
+dist/
+build/
