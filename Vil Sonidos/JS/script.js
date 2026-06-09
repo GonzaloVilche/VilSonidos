@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // nav toggle for mobile
-  const navToggle = document.getElementById('navToggle');
+  const navToggle = document.querySelector('.nav-toggle');
   if (navToggle) {
     navToggle.addEventListener('click', function() {
       const nav = document.querySelector('.nav');

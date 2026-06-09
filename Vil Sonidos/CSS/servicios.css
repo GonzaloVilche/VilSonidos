@@ -159,10 +159,53 @@ main, .site-footer {
   .brand-text{display:none}
 }
 @media (max-width:720px){
-  .nav{display:none}
-  .nav-toggle{display:block}
+  .nav{
+    display:none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #141416;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    flex-direction: column;
+    z-index: 100;
+  }
+  .nav.open{display:flex}
+  
+  .nav .nav-btn {
+    width: 100%;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 24px 20px;
+    font-size: 22px;
+    color: var(--text);
+    transform: none;
+  }
+  .nav .nav-btn:first-child {
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .nav .nav-btn.active {
+    background: rgba(255,255,255,0.03);
+    box-shadow: none;
+    color: var(--green-1);
+  }
+  .nav .nav-btn:hover {
+    transform: none;
+    background: rgba(255,255,255,0.08);
+    box-shadow: none;
+  }
+  .nav .nav-btn::after {
+    display: none;
+  }
+
+  .nav-toggle{display:block; margin-right: 15px}
   .carousel-track img{width:260px;height:150px}
   .modal-inner{flex-direction:column}
   .controls{flex-direction:column;gap:12px}
-  .nav-btn{padding:8px 12px}
 }
