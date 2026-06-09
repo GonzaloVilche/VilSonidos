@@ -3,12 +3,17 @@ const WHATSAPP_NUMBER = '5492994152246'; // ajustá si querés otro
 
 document.addEventListener('DOMContentLoaded', () => {
   // year
-  document.getElementById('year')?.textContent = new Date().getFullYear();
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // nav toggle for mobile
-  document.getElementById('navToggle')?.addEventListener('click', ()=>{
-    document.querySelector('.nav')?.classList.toggle('open');
-  });
+  const navToggle = document.getElementById('navToggle');
+  if (navToggle) {
+    navToggle.addEventListener('click', function() {
+      const nav = document.querySelector('.nav');
+      if (nav) nav.classList.toggle('open');
+    });
+  }
 
   // filter on index
   const filterSelect = document.getElementById('filterSelect');
@@ -58,9 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // close modal on ESC
   document.addEventListener('keydown', (e)=>{
-    if(e.key === 'Escape') {
-      modal?.classList.remove('open');
-      modal?.setAttribute('aria-hidden','true');
+    if(e.key === 'Escape' && modal) {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
     }
   });
 
@@ -81,15 +86,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const w = track.children[0].getBoundingClientRect().width + 12;
       track.style.transform = `translateX(${-w * idx}px)`;
     }
-    prev?.addEventListener('click', ()=> show(idx-1));
-    next?.addEventListener('click', ()=> show(idx+1));
+    if (prev) prev.addEventListener('click', ()=> show(idx-1));
+    if (next) next.addEventListener('click', ()=> show(idx+1));
     setInterval(()=> show(idx+1), 5200);
     window.addEventListener('resize', ()=> show(idx));
   })();
 
   // floating whatsapp opens direct
-  document.getElementById('whatsappFloat')?.addEventListener('click', (e)=>{
-    // link already href, no JS necessary
-  });
+  const whatsappFloat = document.getElementById('whatsappFloat');
+  if (whatsappFloat) {
+    whatsappFloat.addEventListener('click', (e)=>{
+      // link already href, no JS necessary
+    });
+  }
 
 });
